@@ -11,11 +11,11 @@ export default function Home() {
     const result = await res.json();
     
     if(result.price !== undefined){
-      document.getElementById("tokenamt").innerHTML = `<h2>Amount of Tokens for one ETH</h2> <p>${result.price} ${name}</p>`
+      ReactDOM.render(`<h2>Amount of Tokens for one ETH</h2> <p>${result.price} ${name}</p>`,document.getElementById("tokenamt"));
     }
     else{
-      document.getElementById("tokenamt").innerHTML = `<h2>Amount of Tokens for one ETH</h2> <p style = "color: red;">Invalid Ticker!</p>`
-    }
+      ReactDOM.render(`<h2>Amount of Tokens for one ETH</h2> <p style = "color: red;">Invalid Ticker!</p>`, document.getElementById("tokenamt"));
+    } 
     
     
   };
